@@ -52,8 +52,8 @@ public class MainService {
         String yesterday = LocalDate.now().minusDays(1).format(DateTimeFormatter.ISO_LOCAL_DATE);
 
         if (!currencyCode.equals(baseCurrency)) {
-            Double rateToday = getTodayRate(currencyCode);
-            Double rateYesterday = getYesterdayRate(currencyCode, yesterday);
+            Double rateToday = getTodayRate(currencyCode.toUpperCase());
+            Double rateYesterday = getYesterdayRate(currencyCode.toUpperCase(), yesterday);
 
             if (rateToday != null && rateYesterday != null) {
                 gifUrl = (rateToday >= rateYesterday) ? getGifUrl(increaseTag) : getGifUrl(decreaseTag);

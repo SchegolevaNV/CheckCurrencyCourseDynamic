@@ -5,8 +5,7 @@ plugins {
 }
 
 group = 'CheckCurrencyCourseDynamic'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 13
+version = '0.0.1'
 
 repositories {
     mavenCentral()
@@ -19,8 +18,8 @@ ext {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
-    compile('org.springframework.cloud:spring-cloud-starter-openfeign')
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    implementation'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
