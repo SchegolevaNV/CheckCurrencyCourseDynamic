@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 public interface OpenExchangeRatesClient {
 
     /** apiId - My api_id
-     * base -  RUB
+     * base -  USD (because it's free of charge)
      * symbols - currency for compare */
 
     @GetMapping("/latest.json")
