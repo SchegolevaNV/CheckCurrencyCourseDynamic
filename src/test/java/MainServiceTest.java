@@ -34,7 +34,7 @@ class MainServiceTest {
 
     private final String apiGifKey = "VYckgqg8nmDJznidJwHEi4sllXRkcqcL";
     private final String appOpenExchangeRates = "ea10d7ab8e9e4fde837895c6cd94308c";
-    private final String baseCurrency = "RUB";
+    private final String baseCurrency = "USD";
     private final String ratesTag = "rates";
     private final String dataTag = "data";
     private final String imageUrlTag = "image_original_url";
@@ -63,7 +63,7 @@ class MainServiceTest {
         gifBrokeUrl = "https://media4.giphy.com/media/ZGH8VtTZMmnwzsYYMf/giphy.gif?" +
                 "cid=ecf05e47ianfznqq5kyl9a1cmwrrf1m3bbo7y1374wvvasg0&rid=giphy.gif";
 
-        currencyCode = "USD";
+        currencyCode = "RUB";
 
         Mockito.when(gifClient.getGif(apiGifKey, increaseTag)).thenReturn(ResponseEntity.ok(gifObject));
         Mockito.when(gifClient.getGif(apiGifKey, decreaseTag)).thenReturn(ResponseEntity.ok(gifObject));
